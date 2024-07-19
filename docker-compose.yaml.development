@@ -4,13 +4,27 @@ services:
     container_name: umn_technology-1.0.0-snapshot
     image: sellymargaretha/umn-technology:latest
     environment:
-      DB_HOST: localhost
+      DB_HOST: postgres
       DB_PORT: 5432
       DB_NAME: umntechnology
       DB_USER: postgres
       DB_PASS: admin
     ports:
       - "8088:8088"
+    networks:
+      - umn-technology-network
+
+  postgres:
+    image: postgres:latest
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: admin
+      POSTGRES_DB: umntechnology
+    ports:
+      - "5432:5432"
+    networks:
+      - umn-technology-network
+
 networks:
   umn-technology-network:
     external: true
