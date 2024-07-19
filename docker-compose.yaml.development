@@ -1,8 +1,8 @@
 version: '3'
 services:
   umn-technology:
-    container_name: umn-technology-${APP_VERSION}
-    image: ${REGISTRY_URL}/${APP_NAME}:${APP_VERSION}
+    container_name: umn_technology-1.0.0-snapshot
+    image: umn-technology
     restart: unless-stopped
     tty: true
     environment:
