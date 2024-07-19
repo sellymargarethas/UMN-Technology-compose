@@ -4,8 +4,8 @@ services:
     container_name: umn_technology-1.0.0-snapshot
     image: sellymargaretha/umn-technology:latest
     environment:
-      DB_HOST: localhost
-      DB_PORT: 5433
+      DB_HOST: postgres
+      DB_PORT: 5432
       DB_NAME: umntechnology
       DB_USER: postgres
       DB_PASS: admin
