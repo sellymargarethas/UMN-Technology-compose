@@ -5,7 +5,7 @@ services:
     image: sellymargaretha/umn-technology:latest
     environment:
       DB_HOST: postgres
-      DB_PORT: 5432
+      DB_PORT: 5433
       DB_NAME: umntechnology
       DB_USER: postgres
       DB_PASS: admin
@@ -21,7 +21,7 @@ services:
       POSTGRES_PASSWORD: admin
       POSTGRES_DB: umntechnology
     ports:
-      - "5432:5432"
+      - "5433:5432"
     networks:
       - umn-technology-network
 
