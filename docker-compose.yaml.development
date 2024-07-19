@@ -17,13 +17,7 @@ services:
         JWT_KEY: ${JWT_KEY}
         E_KEY: ${E_KEY}
     ports:
-        - "10030:${APP_PORT}"
-    networks:
-        - my_network
-    logging:
-        driver: "json-file"
-        options:
-            max-size: "200m"
+        - "8088:${APP_PORT}"
 networks:
-  my_network:
+  umn-technology-network:
     external: true
